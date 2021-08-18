@@ -136,24 +136,24 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 	}
 
 	func test_delete_hasNoSideEffectsOnDeletionError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-//		let feed = uniqueImageFeed()
-//		let timestamp = Date()
-//		let sut = try makeSUT()
-//
-//		insert((feed, timestamp), to: sut)
-//
-//		stub.startIntercepting()
-//
-//		deleteCache(from: sut)
-//
-//		expect(sut, toRetrieve: .found(feed: feed, timestamp: timestamp))
+		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+		let feed = uniqueImageFeed()
+		let timestamp = Date()
+		let sut = try makeSUT()
+
+		insert((feed, timestamp), to: sut)
+
+		stub.startIntercepting()
+
+		deleteCache(from: sut)
+
+		expect(sut, toRetrieve: .found(feed: feed, timestamp: timestamp))
 	}
 
 	func test_storeSideEffects_runSerially() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatSideEffectsRunSerially(on: sut)
+		let sut = try makeSUT()
+
+		assertThatSideEffectsRunSerially(on: sut)
 	}
 
 	// - MARK: Helpers
