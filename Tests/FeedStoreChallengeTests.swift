@@ -43,96 +43,96 @@ class FeedStoreChallengeTests: XCTestCase, FailableFeedStoreSpecs {
 	}
 
 	func test_retrieve_deliversFailureOnRetrievalError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
 	}
 
 	func test_retrieve_hasNoSideEffectsOnFailure() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
 	}
 
 	func test_insert_deliversNoErrorOnEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
 	}
 
 	func test_insert_deliversNoErrorOnNonEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
 	}
 
 	func test_insert_overridesPreviouslyInsertedCacheValues() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
+		let sut = try makeSUT()
+
+		assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
 	}
 
 	func test_insert_deliversErrorOnInsertionError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatInsertDeliversErrorOnInsertionError(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatInsertDeliversErrorOnInsertionError(on: sut)
 	}
 
 	func test_insert_hasNoSideEffectsOnInsertionError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-//		stub.startIntercepting()
-//
-//		let sut = try makeSUT()
-//
-//		assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
+		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+		stub.startIntercepting()
+
+		let sut = try makeSUT()
+
+		assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
 	}
 
 	func test_delete_deliversNoErrorOnEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatDeleteDeliversNoErrorOnEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatDeleteDeliversNoErrorOnEmptyCache(on: sut)
 	}
 
 	func test_delete_hasNoSideEffectsOnEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatDeleteHasNoSideEffectsOnEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatDeleteHasNoSideEffectsOnEmptyCache(on: sut)
 	}
 
 	func test_delete_deliversNoErrorOnNonEmptyCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatDeleteDeliversNoErrorOnNonEmptyCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatDeleteDeliversNoErrorOnNonEmptyCache(on: sut)
 	}
 
 	func test_delete_emptiesPreviouslyInsertedCache() throws {
-//		let sut = try makeSUT()
-//
-//		assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
+		let sut = try makeSUT()
+
+		assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
 	}
 
 	func test_delete_deliversErrorOnDeletionError() throws {
-//		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-//		let feed = uniqueImageFeed()
-//		let timestamp = Date()
-//		let sut = try makeSUT()
-//
-//		insert((feed, timestamp), to: sut)
-//
-//		stub.startIntercepting()
-//
-//		let deletionError = deleteCache(from: sut)
-//
-//		XCTAssertNotNil(deletionError, "Expected cache deletion to fail")
+		let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+		let feed = uniqueImageFeed()
+		let timestamp = Date()
+		let sut = try makeSUT()
+
+		insert((feed, timestamp), to: sut)
+
+		stub.startIntercepting()
+
+		let deletionError = deleteCache(from: sut)
+
+		XCTAssertNotNil(deletionError, "Expected cache deletion to fail")
 	}
 
 	func test_delete_hasNoSideEffectsOnDeletionError() throws {
